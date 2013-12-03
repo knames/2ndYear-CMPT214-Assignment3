@@ -1,0 +1,57 @@
+
+ # Kennedy Slawinski
+ # kts192
+ # 11053598
+ # CMPT 214 Assignment 3
+
+CC = $(CXX)
+
+CXXFLAGS = -Wall -Wextra
+
+.PHONY: all tests clean
+
+all: vecalc tests
+
+VECALC_OBJ = calc_state.o input_state.o vecalc.o vector.o scalar.o
+
+vecalc: $(VECALC_OBJ)
+	g++ $(VECALC_OBJ) -o vecalc
+
+tests: test_scalar test_vector
+
+TESTSCALAR_OBJ = scalar.o test_scalar.o vector.o
+
+test_scalar: $(TESTSCALAR_OBJ)
+	g++ $(CXXFLAGS) $(TESTSCALAR_OBJ) -o test_scalar
+
+TESTVECTOR_OBJ = vector.o test_vector.o
+
+test_vector: $(TESTVECTOR_OBJ)
+	g++ $(CXXFLAGS) $(TESTVECTOR_OBJ) -o test_vector
+
+calc_state.o: calc_state.cc calc_state.h
+	g++ $(CXXFLAGS) -c calc_state.cc
+
+input_state.o: input_state.cc input_state.h
+	g++ $(CXXFLAGS) -c input_state.cc
+
+vecalc.o: vecalc.cc vecalc.h
+	g++ $(CXXFLAGS) -c vecalc.cc
+
+scalar.o: scalar.cc scalar.h
+	g++ $(CXXFLAGS) -c scalar.cc
+
+vector.o: vector.cc vector.h
+	g++ $(CXXFLAGS) -c vector.cc
+
+test_vector.o: test_vector.cc vector.h
+	g++ $(CXXFLAGS) -c test_vector.cc
+
+test_scalar.o: test_scalar.cc scalar.h
+	g++ $(CXXFLAGS) -c test_scalar.cc
+
+
+
+clean:
+	rm -f *.o
+	rm -f test_scalar test_vector vecalc

@@ -1,0 +1,72 @@
+/* Kennedy Slawinski
+ * kts192
+ * 11053598
+ * CMPT 214 Assignment 3
+ */
+
+using namespace std;
+
+#include "scalar.h"
+#include <stdlib.h> 
+#include "assert.h"
+
+
+
+/* Function that runs the test_scalar program
+ * precon: The functions called from in main work
+ * postcon: tests have been ran
+ * return EXIT_SUCCESS if successful
+ * 			crashes otherwise
+ */
+int main(int, char**)
+{
+	Vector *newVec = alloc_vec();
+	Vector *nullVec = NULL;
+
+	/* Set's the vector array to [100,-50]*/
+	newVec = extend_vec(newVec, 100.0);
+	assert(newVec != NULL);
+	assert(newVec->ptr[0] == 100.0);
+	assert(newVec->Size == 1);
+	newVec = extend_vec(newVec, -50.0);
+	assert(newVec != NULL);
+	assert(newVec->ptr[1] == -50.0);
+	assert(newVec->Size == 2);
+	assert(extend_vec(nullVec, 5) == NULL);
+	
+	//Ensure scalar_plus is working
+	newVec = scalar_plus(newVec, 13.0);
+
+	
+	
+	assert(newVec != NULL);
+	
+	assert(newVec->ptr[0] == 113.0);
+	assert(newVec->ptr[1] == -37.0);
+		
+	assert(scalar_plus(nullVec, 13) == NULL);
+
+
+	//Ensure scalar_minus is working
+	newVec = scalar_minus(newVec, 5.0);
+	assert(newVec != NULL);
+	assert(newVec->ptr[0] == 108.0);
+	assert(newVec->ptr[1] == -42.0);
+	assert(scalar_minus(nullVec, 5) == NULL);
+
+	//Ensure scalar_mult is working
+	newVec = scalar_mult(newVec, 10.0);
+	assert(newVec != NULL);
+	assert(newVec->ptr[0] == 1080.0);
+	assert(newVec->ptr[1] == -420.0);
+	assert(scalar_mult(nullVec, 10) == NULL);
+
+	//Ensure scalar_div is working
+	newVec = scalar_div(newVec, 5.0);
+	assert(newVec != NULL);
+	assert(newVec->ptr[0] == 216.0);
+	assert(newVec->ptr[1] == -84.0);
+	assert(scalar_div(nullVec, 10) == NULL);
+	assert(newVec != NULL);
+	return EXIT_SUCCESS;
+}

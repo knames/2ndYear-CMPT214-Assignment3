@@ -1,0 +1,22 @@
+Kennedy Slawinski
+kts192
+11053598
+CMPT 214 Assignment 3
+
+Everything is working according to the Assignment Outline.
+
+To run this program, you may use the "make all" command while in the same
+directory as the rest of the source files. You may also use "make tests" to
+only create the files necessary to run test_scalar and test_vector.
+
+Once the files are compiled, use ./test_scalar or ./test_vector to run the
+testing programs. You should see no output for ./test_scalar if it ran
+correctly, and you should see "100.000000 -50.000000" after running
+./test_vector.
+
+Use ./vecalc to run the main program, and after you have entered the number of
+vector elements you want to work with, enter "h" for a list of commands you can
+use.
+
+See the test_run_log.txt to see the tests I ran for the ./vecalc program.
+
