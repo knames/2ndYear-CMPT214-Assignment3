@@ -1,0 +1,13 @@
+
+/* Kennedy Slawinski
+ * kts192
+ * 11053598
+ * CMPT 214 Assignment 3
+ */
+
+typedef float Elem;
+
+struct Vector{
+		unsigned int Size;
+		Elem *ptr;
+};

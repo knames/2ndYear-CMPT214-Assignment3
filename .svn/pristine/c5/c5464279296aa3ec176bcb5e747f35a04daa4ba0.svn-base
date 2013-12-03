@@ -1,0 +1,85 @@
+
+/* Kennedy Slawinski
+ * kts192
+ * 11053598
+ * CMPT 214 Assignment 3
+ */
+#include "vector.h"
+#include <stdio.h>   
+#include <stdlib.h>  
+
+using namespace std;
+
+/*
+ * precon: *vec is a pointer to a vector
+ * postcon: prints out the values in *vector
+ * return: true if successful, false if vec was null
+ */
+bool print_vec(Vector *vec)
+{
+	if (vec == NULL)
+		return false;
+	else
+	{
+		for (unsigned int i = 0; i<vec->Size; i++)
+		{
+			printf("%1f ",vec->ptr[i]);
+		}
+		printf("\n");
+		return true;
+	}
+}
+
+/* Precon: 	none
+ * Postcon: return's a pointer to a Vector with size 0
+ * 			and a null Elem ptr array
+ */
+Vector *alloc_vec()
+{
+	Vector *newVec = new Vector;
+	newVec->Size = 0;
+	newVec->ptr = NULL;
+	return newVec;
+
+}
+/*
+ * Precon: 	vec is a pointer to a Vector
+ * Postcon: vec has had it's ptr array deleted
+ *			the Size has been set to zero
+ *			vec is deleted
+ */
+void dealloc_vec(Vector *vec)
+{
+	if (vec != NULL)
+	{
+		delete[] vec->ptr;
+		vec->ptr = NULL;
+		vec->Size = 0;
+		delete vec;
+	}
+}
+/* Precon: 	vec is a pointer to a vector
+ * 			elem is the elem to be appended to the new vector
+ * Postcon:	vec is deallocated, newVec has all of the values
+ * 			of vec, plus the newly appended elem.
+ * Return:	newVec is returned
+ */
+Vector *extend_vec(Vector *vec, Elem elem)
+{
+	if (vec == NULL)
+		return NULL;
+	Vector *newVec = new Vector;
+	newVec->Size = vec->Size+1;
+	newVec->ptr = new Elem[newVec->Size];
+	if (vec->Size != 0)
+	{
+		for (unsigned int i = 0; i<vec->Size; i++)
+		{
+			newVec->ptr[i] = vec->ptr[i];
+		}
+	}
+	newVec->ptr[newVec->Size-1] = elem;
+	dealloc_vec(vec);
+	return newVec;
+}
+

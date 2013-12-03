@@ -1,0 +1,27 @@
+// written by Tony Kusalik, NSID ajk449
+
+/* Kennedy Slawinski
+ * kts192
+ * 11053598
+ * CMPT 214 Assignment 3
+ */
+
+#ifndef _VECTOR_H_
+#define _VECTOR_H_
+#include "vector.h"
+#endif
+
+
+#ifndef _VECALC_H_
+#define _VECALC_H_
+
+
+// global variable pointing to the vector being worked on
+// in a coordinated fashion by main(), input_state(),
+// and calc_state().  
+extern Vector *wrk_vec_p;       
+
+// limit of input buffer sizes
+const int MAX_INPUT_BUF_SIZE=128;
+
+#endif // _VECALC_H_
