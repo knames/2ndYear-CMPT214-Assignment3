@@ -1,0 +1,98 @@
+Kennedy Slawinski
+kts192
+11053598
+CMPT 214 Assignment 3
+
+/* Just a simple test of basic calues*/
+
+
+number of vector elements: 3
+vector element 0: -10
+vector element 1: 0
+vector element 2: 10
+operation: -5
+operation: p
+-15.000000 -5.000000 5.000000 
+operation: +5
+operation: p
+-10.000000 0.000000 10.000000 
+operation: *1000
+operation: p
+-10000.000000 0.000000 10000.000000 
+operation: /10
+operation: p
+-1000.000000 0.000000 1000.000000 
+operation: -1000
+operation: p
+-2000.000000 -1000.000000 0.000000 
+operation: h
+ Usage:
+  p   - print vector
+  q,e - quit, end
+  h   - print usage help
+  c   - clear, free up dynamically-allocated memory
+  + <operand> - add <operand> to each element of vector
+  - <operand> - subtract <operand> from each element of vector
+  * <operand> - multiple each element of vector by <operand>
+  / <operand> - divide each element of vector by <operand>
+  a <value> - extend vector by additional value
+operation: a 63
+operation: p
+-2000.000000 -1000.000000 0.000000 63.000000 
+operation: /3
+operation: p
+-666.666687 -333.333344 0.000000 21.000000 
+
+
+/* It works properly when given expected input. Now trying incorrect inputs */
+
+
+operation: +hello
+ illegal operand value specified
+operation: -h21 
+ illegal operand value specified
+operation: test5
+ operation not recognized
+operation: c
+number of vector elements: 32532905823952
+ illegal number of elements
+number of vector elements: 2 bajillion
+vector element 0: 5
+vector element 1: 6
+operation: /1
+operation: p
+5.000000 6.000000 
+operation: /2
+operation: p
+2.500000 3.000000 
+operation: *2ttt 
+operation: p
+5.000000 6.000000 
+
+
+/* When given correct input for the operation and a number, followed by
+gibberish, it will work, ignoring gibberish */
+
+
+operation: e
+
+./vecalc
+number of vector elements: 
+ no value specified
+number of vector elements: 0
+operation: *5
+operation: p
+
+operation: a5
+operation: p
+5.000000 
+
+ /* When given 0 elements, it still attempts to do the operations on the empty
+array, the only one that will actually do anything though is adding another
+vector first to have a number that can be operated on. */
+
+operation: *45345343
+operation: p
+226726720.000000 
+operation: q
+

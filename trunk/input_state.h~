@@ -14,6 +14,8 @@
 #ifndef _INPUT_STATE_H_
 #define _INPUT_STATE_H_
 
+const int MAX_ELEMS = 250;
+
 // input_state
 //   prompts the user for a size of vector,
 //   allocates a vector of that size,

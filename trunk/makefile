@@ -12,7 +12,7 @@ CXXFLAGS = -Wall -Wextra
 
 all: vecalc tests
 
-VECALC_OBJ = calc_state.o input_state.o vecalc.o
+VECALC_OBJ = calc_state.o input_state.o vecalc.o vector.o scalar.o
 
 vecalc: $(VECALC_OBJ)
 	g++ $(VECALC_OBJ) -o vecalc

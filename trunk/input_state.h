@@ -6,10 +6,8 @@
  * CMPT 214 Assignment 3
  */
 
-#ifndef _VECTOR_H_
-#define _VECTOR_H_
 #include "vector.h"
-#endif
+
 
 #ifndef _INPUT_STATE_H_
 #define _INPUT_STATE_H_

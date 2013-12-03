@@ -11,7 +11,7 @@
 #include "vector.h"
 #endif
 
-#include "scalar.h"
+
 
 #ifndef _CALC_STATE_H_
 #define _CALC_STATE_H_

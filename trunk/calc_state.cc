@@ -14,7 +14,7 @@ using namespace std;
 
 
 #include "scalar.h"
-#include "vecalc.h"                     // for MAX_INPUT_BUF_SIZE, wrk_vec_p   
+#include "vecalc.h"     // for MAX_INPUT_BUF_SIZE, wrk_vec_p   
 
 #ifndef _VECTOR_H_
 #define _VECTOR_H_
@@ -131,6 +131,7 @@ void usage( void ) {
     puts( "  p   - print vector" );
     puts( "  q,e - quit, end" );
     puts( "  h   - print usage help" );
+	puts( "  c   - clear, free up dynamically-allocated memory" );
     puts( "  + <operand> - add <operand> to each element of vector" );
     puts( "  - <operand> - subtract <operand> from each element of vector" );
     puts( "  * <operand> - multiple each element of vector by <operand>" );

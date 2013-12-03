@@ -15,7 +15,7 @@ all: vecalc tests
 VECALC_OBJ = calc_state.o input_state.o vecalc.o
 
 vecalc: $(VECALC_OBJ)
-	g++ (VECALC_OBJ) -o vecalc
+	g++ $(VECALC_OBJ) -o vecalc
 
 tests: test_scalar test_vector
 
