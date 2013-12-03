@@ -5,6 +5,10 @@
  * CMPT 214 Assignment 3
  */
 
+#ifndef _VECTOR_H_
+#define _VECTOR_H_
+
+
 typedef float Elem;
 
 struct Vector{
@@ -41,3 +45,4 @@ void dealloc_vec(Vector *vec);
  * Return:	newVec is returned
  */
 Vector *extend_vec(Vector *vec, Elem elem);
+#endif

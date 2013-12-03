@@ -15,7 +15,7 @@
  * Postcon:	all of the Elem's have had elem added to them
  * Return:	vec is returned.
  */
-Vector *scalar_plus(Vector, Elem);
+Vector *scalar_plus(Vector *vec, Elem elem);
 
 
 /* Precon: 	vec is a pointer to a vector

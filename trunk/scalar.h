@@ -4,10 +4,10 @@
  * CMPT 214 Assignment 3
  */
 
-#ifndef _VECTOR_H_
-#define _VECTOR_H_
+#ifndef _SCALAR_H_
+#define _SCALAR_H_
 #include "vector.h"
-#endif
+
 
 /* Precon: 	vec is a pointer to a vector
  * 			elem is the Elem to be added to each Elem currently
@@ -41,3 +41,5 @@ Vector *scalar_mult(Vector *, Elem);
  * Return:	vec is returned.
  */
 Vector *scalar_div(Vector *, Elem);
+
+#endif

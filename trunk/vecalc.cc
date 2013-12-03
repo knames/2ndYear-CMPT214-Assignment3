@@ -8,10 +8,9 @@ using namespace std;
 #include <stdio.h>      // for puts()
 #include <stdlib.h>     // for EXIT_FAILURE, EXIT_SUCCESS
 
-#ifndef _VECTOR_H_
-#define _VECTOR_H_
+
 #include "vector.h"
-#endif
+
 
 #include "calc_state.h"
 #include "input_state.h"

@@ -6,10 +6,8 @@
 
 using namespace std;
 
-#ifndef _VECTOR_H_
-#define _VECTOR_H_
 #include "vector.h"
-#endif
+
 
 #include <stdlib.h>     // for EXIT_FAILURE, EXIT_SUCCESS
 #include "assert.h"

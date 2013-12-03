@@ -36,7 +36,7 @@ void dealloc_vec(Vector *vec);
 
 /* Precon: 	vec is a pointer to a vector
  * 			elem is the elem to be appended to the new vector
- * Postcon:	vec is deallocated, newVec has all of the values
+ * Postcon:	 newVec has all of the values
  * 			of vec, plus the newly appended elem.
  * Return:	newVec is returned
  */

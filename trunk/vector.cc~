@@ -84,7 +84,7 @@ Vector *extend_vec(Vector *vec, Elem elem)
 		}
 	}
 	newVec->ptr[newVec->Size-1] = elem;
-	dealloc_vec(vec);
+	//dealloc_vec(vec);
 	return newVec;
 }
 
